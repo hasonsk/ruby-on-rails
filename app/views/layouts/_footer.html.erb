@@ -1,0 +1,13 @@
+<footer class="footer">
+  <small>
+    <%= t("common.the") %> <%= link_to t("application.railstutorial"), Settings.default.railstutorial_url %>
+    <%= t("common.by") %> <%= link_to "Michael Hartl", Settings.default.michaelhartl_url %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("footer.about"), about_path %></li>
+      <li><%= link_to t("footer.contact"), contact_path %></li>
+      <li><%= link_to t("footer.news"), Settings.default.railstutorial_url %></li>
+    </ul>
+  </nav>
+</footer>

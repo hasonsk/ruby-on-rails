@@ -33,3 +33,11 @@
 /test/*
 
 /vendor/bundle
+
+# Ignore db test files.
+
+db/test.*
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
