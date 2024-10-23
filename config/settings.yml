@@ -6,7 +6,8 @@ default: &default
   michaelhartl_url: "https://www.michaelhartl.com/"
   learnenough_url: "https://www.learnenough.com/"
   railstutorial_screencasts_url: "https://screencasts.railstutorial.org/"
-
+  name_user_max_length: 50
+  email_user_max_length: 255
 development:
   <<: *default
 
