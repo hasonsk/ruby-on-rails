@@ -45,11 +45,13 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
-gem "bootstrap-sass",  "3.4.1"
+gem "bootstrap-sass", "3.4.1"
 
-gem "sassc-rails",     "2.1.2"
+gem "sassc-rails", "2.1.2"
 
 gem "rails-controller-testing"
+
+gem "bcrypt", "3.1.18"
 
 # gem "sprockets-rails", "3.4.2"
 
