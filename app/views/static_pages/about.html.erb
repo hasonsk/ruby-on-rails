@@ -1,0 +1,9 @@
+<% provide(:title, t("footer.about")) %>
+<h1><%= t("footer.about")%></h1>
+<p>
+  <%= t("common.the")%> <em><%= link_to t("application.railstutorial"), Settings.default.railstutorial%></em>, <%= t("common.family_of_tutorials")%>
+  <%= link_to "Learn Enough", "https://www.learnenough.com/" %> <%= t("common.part_of_the") %>
+  <%= link_to "book", "https://www.railstutorial.org/book" %> <%= t("comon.and") %>
+  <%= link_to "screencast series", "https://screencasts.railstutorial.org/" %> <%= t("common.teach_web") %>
+  <%= link_to "Ruby on Rails", "https://rubyonrails.org/" %>. <%= t("common.this_is") %>
+</p>
