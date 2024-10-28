@@ -1,0 +1,35 @@
+vi:
+  application:
+    base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
+    railstutorial: "Hướng dẫn Ruby on Rails"
+  footer:
+    about: "Giới thiệu"
+    contact: "Liên hệ"
+    news: "Tin tức"
+  header:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+  signup: "Đăng ký ngay!"
+  common:
+    the: "Bộ"
+    by: "của"
+    part_of_the: "là một phần của"
+    family_of_tutorials: "các hướng dẫn, là một"
+    and: "và"
+    teach_web: "để dạy phát triển web với"
+    this_is: "Đây là ứng dụng mẫu cho hướng dẫn này."
+    contactline: "Liên hệ với Hướng dẫn Ruby on Rails về ứng dụng mẫu tại"
+    learn_enough: "Learn Enough"
+  help:
+    get_help_on_tutorial: "Nhận trợ giúp về Hướng dẫn Ruby on Rails tại"
+    tutorial_help_page: "Trang trợ giúp Hướng dẫn"
+    get_help_on_sample_app: "Để nhận trợ giúp về ứng dụng mẫu này, xem"
+    rails_tutorial_book: "sách Hướng dẫn Ruby on Rails"
+  home:
+    description: "Đây là trang chủ cho"
+    sample_application: "ứng dụng mẫu"
+  about:
+    screencast_series: "screencast series"
+    ruby_on_rails: "Ruby on Rails"
+    book: "sách"

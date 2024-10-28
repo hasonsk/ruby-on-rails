@@ -1,0 +1,17 @@
+default: &default
+  railstutorial_url: "https://www.railstutorial.org/"
+  railstutorial_help_url: "https://www.railstutorial.org/help"
+  railstutorial_book_url: "https://www.railstutorial.org//book"
+  railstutorial_contact_url: "https://www.railstutorial.org/contact"
+  michaelhartl_url: "https://www.michaelhartl.com/"
+  learnenough_url: "https://www.learnenough.com/"
+  railstutorial_screencasts_url: "https://screencasts.railstutorial.org/"
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

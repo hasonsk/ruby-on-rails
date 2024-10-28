@@ -1,0 +1,8 @@
+<% provide :title, t("header.help") %>
+<h1><%= t "header.help" %></h1>
+<p>
+  <%= t "help.get_help_on_tutorial" %>
+  <%= link_to t("help.tutorial_help_page"), Settings.default.railstutorial_help_url %>.
+  <%= t "help.get_help_on_sample_app" %>
+  <%= link_to raw("<em>#{t("help.rails_tutorial_book")}</em>"), Settings.default.railstutorial_book_url %>.
+</p>

@@ -1,0 +1,35 @@
+ja:
+  application:
+    base_title: "Ruby on Rails チュートリアルサンプルアプリ"
+    railstutorial: "Ruby on Rails チュートリアル"
+  footer:
+    about: "私たちについて"
+    contact: "お問い合わせ"
+    news: "ニュース"
+  header:
+    home: "ホーム"
+    help: "ヘルプ"
+    login: "ログイン"
+  signup: "今すぐサインアップ!"
+  common:
+    the: "このは"
+    by: "によって"
+    part_of_the: "の一部である"
+    family_of_tutorials: "チュートリアルシリーズ、"
+    and: "そして"
+    teach_web: "でウェブ開発を教えるのは"
+    this_is: "これはチュートリアルのサンプルアプリです。"
+    contactline: "Rubyonレールスチュートリアルについてサンプルアプリの問い合わせは"
+    learn_enough: "Learn Enough"
+  help:
+    get_help_on_tutorial: "Rubyオンレールスチュートリアルについてのヘルプは"
+    tutorial_help_page: "チュートリアルヘルプページ"
+    get_help_on_sample_app: "このサンプルアプリについてのヘルプは"
+    rails_tutorial_book: "Rubyonレールスチュートリアル書"
+  home:
+    description: "これはサンプルアプリのホームページです"
+    sample_application: "サンプルアプリケーション"
+  about:
+    screencast_series: "screencast series"
+    ruby_on_rails: "Ruby on Rails"
+    book: "book"

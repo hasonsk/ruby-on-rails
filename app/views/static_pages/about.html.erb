@@ -1,0 +1,9 @@
+<% provide :title, t("footer.about") %>
+<h1><%= t "footer.about" %></h1>
+<p>
+  <%= t "common.the" %> <em> <%= link_to t("application.railstutorial"), Settings.default.railstutorial %> </em> <%= t "common.family_of_tutorials" %>
+  <%= link_to t("common.learn_enough"), Settings.default.learnenough %> <%= t "common.part_of_the" %>
+  <%= link_to t("about.book"), Settings.default.railstutorial_book_url %> <%= t"common.and" %>
+  <%= link_to t("about.screencast_series"), Settings.default.railstutorial_screencasts_url %> <%= t"common.teach_web" %>
+  <%= link_to t("about.ruby_on_rails"), Settings.default.railstutorial_url %>. <%= t "common.this_is" %>
+</p>
