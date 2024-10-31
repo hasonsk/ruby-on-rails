@@ -21,6 +21,7 @@ en:
     this_is: "This is the sample app for the tutorial."
     contactline: "Contact the Ruby on Rails Tutorial about the sample app at the"
     learn_enough: "Learn Enough"
+    the_form_contains: "The form contains"
   help:
     get_help_on_tutorial: "Get help on the Ruby on Rails Tutorial at the"
     tutorial_help_page: "Rails Tutorial Help page"
@@ -33,3 +34,10 @@ en:
     screencast_series: "screencast series"
     ruby_on_rails: "Ruby on Rails"
     book: "book"
+  sign_up:
+    sign_up: 'Sign up'
+    confirmation: 'Confirmation'
+    create_my_account: 'Create my account'
+    welcome_to: "Welcome to the Sample App!"
+  error:
+    user_not_found: "User not found."
