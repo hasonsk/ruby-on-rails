@@ -12,6 +12,8 @@ module RailsTutorial
     config.load_defaults 7.0
     config.i18n.default_locale = :vi
     config.i18n.available_locales = [:en, :vi, :ja]
+
+    config.email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
