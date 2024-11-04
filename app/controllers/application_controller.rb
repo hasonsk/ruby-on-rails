@@ -5,4 +5,6 @@ class ApplicationController < ActionController::Base
   def render_not_found _exception
     render plain: "404 Not Found", status: :not_found
   end
+
+  include SessionsHelper
 end

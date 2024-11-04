@@ -10,6 +10,11 @@ en:
     home: "Home"
     help: "Help"
     login: "Log in"
+    logout: "Log out"
+    profile: "Profile"
+    settings: "Settings"
+    users: "Users"
+    account: "Account"
   signup: "Sign up now!"
   common:
     the: "The"
@@ -41,3 +46,6 @@ en:
     welcome_to: "Welcome to the Sample App!"
   error:
     user_not_found: "User not found."
+  login:
+    new_users: "New user?"
+    invalid_email_password: "Invalid email/password combination"
