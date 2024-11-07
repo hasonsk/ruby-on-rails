@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
   end
 
   include SessionsHelper
+  include Pagy::Backend
 end

@@ -50,3 +50,16 @@ en:
     new_users: "New user?"
     invalid_email_password: "Invalid email/password combination"
     remember_me: "Remember me on this computer"
+  user:
+    update_your_profile: "Update your profile"
+    confirmation: "Confirmation"
+    save_changes: "Save changes"
+    edit_user: "Edit user"
+    profile_updated: "Proflie updated"
+    please_login: "Please log in."
+    all_users: "All users"
+    user_deleted: "User deleted"
+    you_sure: "You sure?"
+
+  button:
+    change: "change"
