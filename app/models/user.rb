@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: Settings.default.email_user_max_length},
                     format: {with: Rails.application.config.email_regex},
                     uniqueness: true
-  validates :password, presence: true, length: {minimum: Settings.default.password_min_length}
+  validates :password, presence: true, length: {minimum: Settings.default.password_min_length}, allow_nil: true
   has_secure_password
   attr_accessor :remember_token
 
@@ -25,14 +25,19 @@ class User < ApplicationRecord
   end
 
   def remember
-    self.remember_token = this.new_token
-    update_attribute(:remember_digest, this.digest(remember_token))
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
+    remember_digest
   end
 
   def authenticated? remember_token
     return false if :remember_digest.nil?
 
     BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def session_token
+    remember_digest || remember
   end
 
   def forget
