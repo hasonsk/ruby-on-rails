@@ -5,10 +5,13 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @pagy, @users = pagy(User.all, limit: Settings.default.users_per_page)
+    @pagy, @users = pagy(User.where(activated: true), items: Settings.default.users_per_page)
   end
 
-  def show; end
+  def show
+    @user = User.find params[:id]
+    redirect_to root_url and return unless @user.activated?
+  end
 
   def new
     @user = User.new
@@ -17,10 +20,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      reset_session
-      log_in @user
-      flash[:success] = t "sign_up.welcome_to"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = t "user.please_check_your_mail"
+      redirect_to root_url
     else
       render :new, status: :unprocessable_entity
     end
@@ -55,6 +57,7 @@ class UsersController < ApplicationController
 
   def logged_in_user
     return if logged_in?
+
     store_location
     flash[:danger] = t "user.please_login"
     redirect_to login_url, status: :see_other

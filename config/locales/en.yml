@@ -27,6 +27,8 @@ en:
     contactline: "Contact the Ruby on Rails Tutorial about the sample app at the"
     learn_enough: "Learn Enough"
     the_form_contains: "The form contains"
+    sapmle_app: "Sample App"
+    hi: "Hi"
   help:
     get_help_on_tutorial: "Get help on the Ruby on Rails Tutorial at the"
     tutorial_help_page: "Rails Tutorial Help page"
@@ -60,6 +62,11 @@ en:
     all_users: "All users"
     user_deleted: "User deleted"
     you_sure: "You sure?"
-
+    please_check_your_mail: "Please check your email to activate your account."
+    account_activated: "Account activated!"
+    invalid_activation_link: "Invalid activation link"
+    account_not_activated: "Account not activated. Check your email for the activation link."
+    account_activation: "Account activation"
+    welcom_and_activate: "Welcome to the Sample App! Click on the link below to activate your account:"
   button:
     change: "change"
