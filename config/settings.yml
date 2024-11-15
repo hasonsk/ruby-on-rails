@@ -8,6 +8,8 @@ default: &default
   railstutorial_screencasts_url: "https://screencasts.railstutorial.org/"
   secure_gravatar_url: "https://secure.gravatar.com/avatar/"
   gravatar_emails: "https://gravatar.com/emails"
+  host_url: "http://localhost:3000/"
+  protocol: "https"
   users_per_page: 10
   name_user_max_length: 50
   email_user_max_length: 255
