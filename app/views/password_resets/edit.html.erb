@@ -1,0 +1,16 @@
+<% provide :title, t("password_reset.reset_pw") %>
+<h1><%= t "password_reset.reset_pw" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user, url: password_reset_path(params[:id])) do |f| %>
+      <%= render "shared/error_messages" %>
+      <%= f.hidden_field :email, value: @user.email %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
+      <%= f.label :password_confirmation, t("user.comfirmation") %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+      <%= f.submit t("password_reset.update_pw"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -6,5 +6,5 @@
   <%= t "user.welcom_and_activate" %>
 </p>
 
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+<%= link_to t("user.activate"), edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
