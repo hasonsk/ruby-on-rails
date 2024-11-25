@@ -5,12 +5,11 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @pagy, @users = pagy(User.where(activated: true), items: Settings.default.users_per_page)
+    @pagy, @users = pagy User.where(activated: true), items: Settings.default.users_per_page
   end
 
   def show
-    @user = User.find params[:id]
-    redirect_to root_url and return unless @user.activated?
+    @pagy, @microposts = pagy @user.microposts.order(created_at: :desc), items: Settings.default.microposts_per_page
   end
 
   def new
@@ -48,7 +47,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(User::PERMITTED_ATTRIBUTES)
+    params.require(:user).permit(User::USER_PERMITTED_ATTRIBUTES)
   end
 
   def set_user

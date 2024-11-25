@@ -3,12 +3,10 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.raise_delivery_errors = true
-
   config.action_mailer.delivery_method = :smtp
-
   host = Settings.default.host_url
-
   config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.perform_deliveries = true
 
   ActionMailer::Base.smtp_settings = {
     address: "smtp.sendgrid.net",
@@ -19,11 +17,8 @@ Rails.application.configure do
     password: ENV["SENDGRID_API_KEY"],
     enable_starttls_auto: true
   }
-
-  config.action_mailer.perform_deliveries = true
-
   config.cache_classes = true
-
+  config.action_mailer.perform_deliveries = true
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.

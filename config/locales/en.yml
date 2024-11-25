@@ -29,6 +29,8 @@ en:
     the_form_contains: "The form contains"
     sapmle_app: "Sample App"
     hi: "Hi"
+    posted: "Posted"
+    ago_: "ago."
   help:
     get_help_on_tutorial: "Get help on the Ruby on Rails Tutorial at the"
     tutorial_help_page: "Rails Tutorial Help page"
@@ -37,6 +39,9 @@ en:
   home:
     description: "This is the home page for the"
     sample_application: "sample application"
+    micropost_created: "Micropost created!"
+    micropost_deleted: "Micropost deleted"
+    unauthorized_action: "Unauthorized action"
   about:
     screencast_series: "screencast series"
     ruby_on_rails: "Ruby on Rails"
@@ -71,6 +76,8 @@ en:
     welcom_and_activate: "Welcome to the Sample App! Click on the link below to activate your account:"
   button:
     change: "change"
+    delete: "delete"
+    post: "Post"
   password_reset:
     email_sent_with_pw_reset_instructions: "Email sent with password reset instructions"
     email_address_not_found: "Email address not found"
@@ -87,3 +94,11 @@ en:
     summit: "Submit"
     this_link_will_expire: "This link will expire in two hours."
     if_you_did_not_: "If you did not request your password to be reset, please ignore this email, and your password will stay as it is."
+  micropost:
+    microposts: "Microposts"
+    image_must_be_a_valid_image_fomat: "Image must be a valid image format"
+    image_shoulde_be_less_than_5MB: "Image should be less than 5MB"
+    image_must_be_attached: "Image must be attached"
+    maximum_file_size_is_5mb: "Maximum file size is 5MB. Please choose a smaller file."
+    compose_new_micropost: "Compose new micropost..."
+    micropost_feed: "Micropost Feed"
