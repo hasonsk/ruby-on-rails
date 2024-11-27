@@ -3,6 +3,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "3.1.2"
 
+gem "active_storage_validations", "0.9.8"
 gem "bcrypt"
 gem "bootsnap", require: false
 gem "bootstrap-sass", "3.4.1"
@@ -11,6 +12,7 @@ gem "config"
 gem "faker", "2.21.0"
 gem "i18n"
 gem "importmap-rails"
+gem "image_processing", "1.12.2"
 gem "jbuilder"
 gem "figaro"
 gem "mysql2", "~> 0.5"
@@ -40,4 +42,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :production do
+  gem "pg", "1.3.5"
 end
