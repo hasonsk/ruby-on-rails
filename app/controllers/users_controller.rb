@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i(edit update index)
+  before_action :logged_in_user, only: %i(edit update index following followers)
   before_action :set_user, only: %i(show edit update destroy)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
@@ -42,6 +42,20 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:success] = t "user.user_deleted"
     redirect_to users_url, status: :see_other
+  end
+
+  def following
+    @title = t "home.following"
+    @user = User.find params[:id]
+    @pagy, @users = pagy @user.following, page: params[:page], items: Settings.default.users_per_page
+    render "show_follow", status: :unprocessable_entity
+  end
+
+  def followers
+    @title = t "home.followers"
+    @user = User.find params[:id]
+    @pagy, @users = pagy @user.followers, page: params[:page], items: Settings.default.users_per_page
+    render "show_follow", status: :unprocessable_entity
   end
 
   private

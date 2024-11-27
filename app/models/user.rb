@@ -1,5 +1,16 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+                                  foreign_key: :follower_id,
+                                  dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+                                  foreign_key: :followed_id,
+                                  dependent: :destroy
+
+  has_many :following, through: :active_relationships,
+                        source: :followed
+  has_many :followers, through: :passive_relationships,
+                        source: :follower
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
@@ -7,11 +18,15 @@ class User < ApplicationRecord
 
   USER_PERMITTED_ATTRIBUTES = [:name, :email, :password, :password_confirmation].freeze
 
-  validates :name, presence: true, length: {maximum: Settings.default.name_user_max_length}
-  validates :email, presence: true, length: {maximum: Settings.default.email_user_max_length},
+  validates :name, presence: true,
+                    length: {maximum: Settings.default.name_user_max_length}
+  validates :email, presence: true,
+                    length: {maximum: Settings.default.email_user_max_length},
                     format: {with: Rails.application.config.email_regex},
                     uniqueness: true
-  validates :password, presence: true, length: {minimum: Settings.default.password_min_length}, allow_nil: true
+  validates :password, presence: true,
+                       length: {minimum: Settings.default.password_min_length},
+                       allow_nil: true
   has_secure_password
 
   class << self
@@ -72,9 +87,20 @@ class User < ApplicationRecord
   end
 
   def feed
-    Micropost.newest_by_user id
+    Micropost.feed_for id
   end
 
+  def follow other_user
+    following << other_user unless self == other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
   private
 
   def downcase_email
