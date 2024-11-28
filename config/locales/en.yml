@@ -42,6 +42,11 @@ en:
     micropost_created: "Micropost created!"
     micropost_deleted: "Micropost deleted"
     unauthorized_action: "Unauthorized action"
+    following: "Following"
+    followers: "Followers"
+    lower:
+      following: "following"
+      followers: "followers"
   about:
     screencast_series: "screencast series"
     ruby_on_rails: "Ruby on Rails"
@@ -78,6 +83,8 @@ en:
     change: "change"
     delete: "delete"
     post: "Post"
+    follow: "Follow"
+    unfollow: "Unfollow"
   password_reset:
     email_sent_with_pw_reset_instructions: "Email sent with password reset instructions"
     email_address_not_found: "Email address not found"

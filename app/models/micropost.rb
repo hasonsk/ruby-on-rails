@@ -13,6 +13,13 @@ class Micropost < ApplicationRecord
   validate :validate_image
 
   scope :newest_by_user, ->(user_id){where(user_id: user_id)}
+  scope :feed_for, lambda {|user_id|
+    part_of_feed = "relationships.follower_id = :id OR microposts.user_id = :id"
+    left_outer_joins(user: :followers)
+      .where(part_of_feed, id: user_id)
+      .distinct
+      .includes(:user, image_attachment: :blob)
+  }
 
   private
 
